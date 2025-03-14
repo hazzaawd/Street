@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سيرفرنا - الصفحة الرئيسية</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 1.3em;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        .navbar a:hover {
+            color: #a0c4ff;
+        }
+        .header {
+            padding: 100px 20px 50px;
+            font-size: 3em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.8);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 60px 20px;
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.7);
+        }
+        .law-description {
+            display: none;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            font-size: 1.1em;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .law-description.open {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        h2 {
+            color: #a0c4ff;
+            font-size: 2em;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Street Fighter</h1>
+    </div>
+    
+    <div class="header" id="home">مرحبًا بكم في سيرفرنا</div>
+    
+    <div class="container">
+        <div class="section" id="rules">
+            <h2 onclick="toggleLaw('law1')">قوانين السيرفر</h2>
+            <div class="law-description" id="law1">
+                <p>الاحترام بين اللاعبين داخل السيرفر
+
+
+
+                    يمنع حشر الرسبون
+                    
+                    يمنع منعاً باتاً استخدام اي قلتش او استخدام ثغره او ملفات او هاك بجميع انواعه ومن يستخدم اياَ منها يعرض نفسه للمخالفة عقوبتها = باند نهائي 
+                    
+                    تعدد الحسابات = باند نهائي 
+                    
+                    تمنع الشخصنة بجميع اشكالها وانواعها
+                    
+                    يمنع لبس الخوذ بجميع انواعها 
+                    
+                    يمنع منعاً باتاً انتحالك لشخصيه اداريه وانت مب اداري
+                    
+                    اسم مكون من احرف كثيره , الاسم الي يميل للتوكسك , الاسم العربي , الاسم المخفي 
+                    
+                    يمنع منعاً باتاً استخدام اي برنامج لرفع البنق بهدف الانتقالات او الخ .. ( عقوبتها باند نهائي ) 
+                    
+                    يجب تشغيل برنامج التصوير ( 20 د) اثناء اللعب وسيتم محاسبتك في حال عدم وجوده 
+                    
+                    يمنع منعاً باتاً لعب الاسبيد بوست بالمابات الغير مخصصة 
+                    
+                    ممنوع القتل في موقع بوت الايفكت 
+                    
+                    يمنع التوكسيك 
+                    
+                    في حال اكتشاف اي شخص يلعب يد سوني او اكس بوكس يتم حظره بشكل نهائي من اللعب
+                    
+                    يمنع عمل اي مصدر ازعاج 
+                    يمنع التخريم
+                    
+                    يمنع القتل في منطقة الايفكت تيست 
+                    
+                    يمنع وضع اسامي مسيئة باي شكل من الاشكال او وضع اسمك طويل 
+                    
+                     في حال اكتشاف اي شخص مركب شي يسوي لك افضليه عن لاعب ثاني راح يجيك باند نهائي مثل الكونتينرات المخفيه المنتشره 
+                    </p>
+            </div>
+            
+            <h2 onclick="toggleLaw('law2')">قوانين الدسكورد</h2>
+            <div class="law-description" id="law2">
+                <p>1 - الأحترام المتبادل بين الجميع و عدم التلفظ  بالالفاظ ( سوقية أو نابئة ) .</p>
+            </div>
+
+            <h2 onclick="toggleLaw('law4')">قوانين الرن قن</h2>
+            <div class="law-description" id="law4">
+                <p> في حال دخلت رن قن و شفت ناس يلعبون تطلع من الماب على طول
+
+                    في حال دخلت الرن قن بالحالك و جوك 2 او اكثر يحق لهم ياخذون الماب منك
+                   
+                    في حال لعبت تحدي ضد ناس و فازو عليك يحق لهم ياخذون الماب منك (الفائز مستمر)
+                   </p>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        function toggleLaw(lawId) {
+            var lawDescription = document.getElementById(lawId);
+            lawDescription.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
